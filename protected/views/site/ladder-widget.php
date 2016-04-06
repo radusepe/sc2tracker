@@ -1,6 +1,6 @@
 <link href="../css/ladder-widget.css" rel="stylesheet">
 <script src="../../../../assets/js/ladder-widget.js"></script>
-<div style="height: 100%; width: 100%; color: red;">
+<div style="height: 100%; width: 100%; color: #417292;">
 	<div class="league-container">
 		<div id="league-symbol">
 		</div>

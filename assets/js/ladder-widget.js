@@ -43,48 +43,50 @@ $(document).ready(function(){
 
 
     xhr.open("GET", "https://us.api.battle.net/sc2/ladder/"+ladderId+"?locale=en_US&apikey=tb68txxwdq4vwxtwah7gkww6uqebxn9v", false);
-    xhr.send();
+    if(ladderId != 0){
+        xhr.send();
 
-    result = xhr.response;
-    json = JSON.parse(result);
-    // console.log(json);
-    var ladderMembers = json.ladderMembers;
+        result = xhr.response;
+        json = JSON.parse(result);
+        // console.log(json);
+        var ladderMembers = json.ladderMembers;
 
-    var rankIter;
+        var rankIter;
 
-    //will need math fixes
-    for(var i=0; i < 5; i++){
-        var rowName = document.createElement('p');
-        rowName.innerHTML = ladderMembers[i+rank-3].character.displayName;
-        rowName.className = 'rowName';
-        document.getElementById('name'+(i+1)).appendChild(rowName);
+        //will need math fixes
+        for(var i=0; i < 5; i++){
+            var rowName = document.createElement('p');
+            rowName.innerHTML = ladderMembers[i+rank-3].character.displayName;
+            rowName.className = 'rowName';
+            document.getElementById('name'+(i+1)).appendChild(rowName);
 
-        var rowRank = document.createElement('p');
-        rowRank.innerHTML = i+rank-2;
-        rowRank.className = 'rowRank';
-        document.getElementById('rank'+(i+1)).appendChild(rowRank);
+            var rowRank = document.createElement('p');
+            rowRank.innerHTML = i+rank-2;
+            rowRank.className = 'rowRank';
+            document.getElementById('rank'+(i+1)).appendChild(rowRank);
 
-        // var rowRace = document.createElement('p');
-        if(ladderMembers[i+rank-3].favoriteRaceP1 != undefined){
-            // rowRace.innerHTML = ladderMembers[i+rank-3].favoriteRaceP1;//this has to be changed to use picture not text
-            // rowRace.className = 'rowRace';
-            // document.getElementById('race'+(i+1)).appendChild(rowRace);
-            $('#race'+(i+1)).css('background-image', 'url(' + '../../../../images/race-symbols.png' + ') ');
-            $('#race'+(i+1)).css('background-repeat', 'no-repeat');
-            if(ladderMembers[i+rank-3].favoriteRaceP1 == 'TERRAN'){
-                $('#race'+(i+1)).css('background-position', '0px 2px');
+            // var rowRace = document.createElement('p');
+            if(ladderMembers[i+rank-3].favoriteRaceP1 != undefined){
+                // rowRace.innerHTML = ladderMembers[i+rank-3].favoriteRaceP1;//this has to be changed to use picture not text
+                // rowRace.className = 'rowRace';
+                // document.getElementById('race'+(i+1)).appendChild(rowRace);
+                $('#race'+(i+1)).css('background-image', 'url(' + '../../../../images/race-symbols.png' + ') ');
+                $('#race'+(i+1)).css('background-repeat', 'no-repeat');
+                if(ladderMembers[i+rank-3].favoriteRaceP1 == 'TERRAN'){
+                    $('#race'+(i+1)).css('background-position', '0px 2px');
+                }
+                else if(ladderMembers[i+rank-3].favoriteRaceP1 == 'ZERG'){
+                    $('#race'+(i+1)).css('background-position', '0px -56px');
+                }
+                else if(ladderMembers[i+rank-3].favoriteRaceP1 == 'PROTOSS'){
+                    $('#race'+(i+1)).css('background-position', '0px -110px');
+                }
+                else{
+                    $('#race'+(i+1)).css('background-position', '0px -162px');
+                }
+                
+
             }
-            else if(ladderMembers[i+rank-3].favoriteRaceP1 == 'ZERG'){
-                $('#race'+(i+1)).css('background-position', '0px -56px');
-            }
-            else if(ladderMembers[i+rank-3].favoriteRaceP1 == 'PROTOSS'){
-                $('#race'+(i+1)).css('background-position', '0px -110px');
-            }
-            else{
-                $('#race'+(i+1)).css('background-position', '0px -162px');
-            }
-            
-
         }
     }
 });

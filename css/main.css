@@ -5,6 +5,7 @@ body
 	color: #555;
 	font: normal 10pt Arial,Helvetica,sans-serif;
 	background: #EFEFEF;
+	font-family: 'DINCondensedBold' !important;
 }
 
 #page
@@ -226,4 +227,9 @@ div.search-form
 .operations li a:hover
 {
 	background: #80CFFF;
+}
+
+@font-face {
+	font-family: 'DINCondensedBold';
+	src: url("../assets/fonts/DINCondensedBold.otf") format("opentype");
 }

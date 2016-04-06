@@ -29,7 +29,13 @@
       <div class="header-bar">
         <div class="main-header">
           <div id="title"></div>
-          <div class="user-info"></div>
+          <div class="user-info">
+            <p><?php echo $name ?></p>
+            
+            <div id="portrait-container">
+              <img src="/images/portrait-summary-grandmaster.png" id="portrait">
+            </div>
+          </div>
         </div>
       </div>
       <div class="main-container">
@@ -58,9 +64,47 @@
 
         <div class="col-md-4">
           <div class="widget-container">
-            
+            <div class="widget-data" id="grandmaster-widget">
+              <?php
+                $this->renderPartial('grandmaster-widget', array('id' => $id, 'realm' => $realm, 'name' => $name) ); 
+              ?>
+            </div>
+            <div class="widget-base">grandmaster</div>
           </div>
         </div>
+
+        <!-- <div class="col-md-4">
+          <div class="widget-container">
+            <div class="widget-data" id="winloss-widget">
+              <?php
+                // $this->renderPartial('grandmaster-widget', array('id' => $id, 'realm' => $realm, 'name' => $name) ); 
+              ?>
+            </div>
+            <div class="widget-base">win/loss</div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="widget-container">
+            <div class="widget-data" id="streak-widget">
+              <?php
+                // $this->renderPartial('grandmaster-widget', array('id' => $id, 'realm' => $realm, 'name' => $name) ); 
+              ?>
+            </div>
+            <div class="widget-base">play streak</div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="widget-container">
+            <div class="widget-data" id="history-widget">
+              <?php
+                // $this->renderPartial('grandmaster-widget', array('id' => $id, 'realm' => $realm, 'name' => $name) ); 
+              ?>
+            </div>
+            <div class="widget-base">match history</div>
+          </div>
+        </div> -->
 
       </div>
     <!-- </div> -->

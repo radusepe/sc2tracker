@@ -71,3 +71,41 @@ REQUEST_URI=/?&id=2538432&realm=1&name=radu
 in /Users/radu/Documents/coding/sc2tracker/protected/views/site/dashboard.php (17)
 in /Users/radu/Documents/coding/sc2tracker/protected/controllers/SiteController.php (32)
 in /Users/radu/Documents/coding/sc2tracker/index.php (13)
+2016/04/06 00:32:20 [error] [exception.CException] CException: SiteController cannot find the requested view "grandmaster-widget". in /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php:878
+Stack trace:
+#0 /Users/radu/Documents/coding/sc2tracker/protected/views/site/dashboard.php(63): CController->renderPartial('grandmaster-wid...', Array)
+#1 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CBaseController.php(126): require('/Users/radu/Doc...')
+#2 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/radu/Doc...', NULL, true)
+#3 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(869): CBaseController->renderFile('/Users/radu/Doc...', NULL, true)
+#4 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(782): CController->renderPartial('dashboard', NULL, true)
+#5 /Users/radu/Documents/coding/sc2tracker/protected/controllers/SiteController.php(32): CController->render('dashboard')
+#6 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#7 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CWebApplication.php(282): CController->run('')
+#11 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#12 /Users/radu/Documents/coding/sc2tracker/protected/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/radu/Documents/coding/sc2tracker/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/?&id=2538432&realm=1&name=radu
+---
+2016/04/06 00:33:37 [error] [exception.CException] CException: SiteController cannot find the requested view "grandmaster-widget". in /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php:878
+Stack trace:
+#0 /Users/radu/Documents/coding/sc2tracker/protected/views/site/dashboard.php(63): CController->renderPartial('grandmaster-wid...', Array)
+#1 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CBaseController.php(126): require('/Users/radu/Doc...')
+#2 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/radu/Doc...', NULL, true)
+#3 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(869): CBaseController->renderFile('/Users/radu/Doc...', NULL, true)
+#4 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(782): CController->renderPartial('dashboard', NULL, true)
+#5 /Users/radu/Documents/coding/sc2tracker/protected/controllers/SiteController.php(32): CController->render('dashboard')
+#6 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#7 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CWebApplication.php(282): CController->run('')
+#11 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#12 /Users/radu/Documents/coding/sc2tracker/protected/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/radu/Documents/coding/sc2tracker/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/?&id=2538432&realm=1&name=radu
+---

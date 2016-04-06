@@ -3,9 +3,7 @@
 	<?php 
 	  // echo "TEST";
 	  // $name = $_GET['name'];
-	  if(isset($name)){
-	  	echo $name;
-	  	echo $id;
-	  }
+	  	// echo $name;
+	  	// echo $id;
 	?>
 </div>
