@@ -109,3 +109,69 @@ Stack trace:
 #14 {main}
 REQUEST_URI=/?&id=2538432&realm=1&name=radu
 ---
+2016/04/08 00:27:53 [error] [php] Undefined index: id (/Users/radu/Documents/coding/sc2tracker/protected/views/site/dashboard.php:16)
+Stack trace:
+#0 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(869): SiteController->renderFile()
+#1 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /Users/radu/Documents/coding/sc2tracker/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(286): SiteController->runAction()
+#6 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/radu/Documents/coding/sc2tracker/protected/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/radu/Documents/coding/sc2tracker/index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in /Users/radu/Documents/coding/sc2tracker/protected/views/site/dashboard.php (16)
+in /Users/radu/Documents/coding/sc2tracker/protected/controllers/SiteController.php (32)
+in /Users/radu/Documents/coding/sc2tracker/index.php (13)
+2016/04/08 00:27:53 [error] [php] Undefined index: id (/Users/radu/Documents/coding/sc2tracker/protected/views/site/dashboard.php:16)
+Stack trace:
+#0 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(869): SiteController->renderFile()
+#1 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /Users/radu/Documents/coding/sc2tracker/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(286): SiteController->runAction()
+#6 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/radu/Documents/coding/sc2tracker/protected/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/radu/Documents/coding/sc2tracker/index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in /Users/radu/Documents/coding/sc2tracker/protected/views/site/dashboard.php (16)
+in /Users/radu/Documents/coding/sc2tracker/protected/controllers/SiteController.php (32)
+in /Users/radu/Documents/coding/sc2tracker/index.php (13)
+2016/04/08 00:31:23 [error] [php] Undefined variable: id (/Users/radu/Documents/coding/sc2tracker/protected/views/site/dashboard.php:24)
+Stack trace:
+#0 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(869): SiteController->renderFile()
+#1 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /Users/radu/Documents/coding/sc2tracker/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(286): SiteController->runAction()
+#6 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/radu/Documents/coding/sc2tracker/protected/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/radu/Documents/coding/sc2tracker/index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in /Users/radu/Documents/coding/sc2tracker/protected/views/site/dashboard.php (24)
+in /Users/radu/Documents/coding/sc2tracker/protected/controllers/SiteController.php (32)
+in /Users/radu/Documents/coding/sc2tracker/index.php (13)
+2016/04/08 01:38:43 [error] [exception.CException] CException: SiteController cannot find the requested view "index". in /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php:878
+Stack trace:
+#0 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /Users/radu/Documents/coding/sc2tracker/protected/controllers/SiteController.php(36): CController->render('index')
+#2 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#3 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CWebApplication.php(282): CController->run('')
+#7 /Users/radu/Documents/coding/sc2tracker/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /Users/radu/Documents/coding/sc2tracker/protected/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /Users/radu/Documents/coding/sc2tracker/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/
+---

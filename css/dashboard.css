@@ -95,29 +95,14 @@ body {
 	background-color: #242e3a;
 }
 
-#portrait-border {
-	height: 100%;
-	position: relative;
-	width: 141px;
-	background: url(/images/portrait-summary-grandmaster.png);
-	background-repeat: no-repeat;
-	background-position: 0px 0px;
-	float: right;
-	margin-right: 50px;
-	z-index: 1000;
-}
-
 #portrait {
 	position: absolute;
-    top: -18px;
-    right: -19px;
 }
 
 #portrait-container {
 	height: 90px;
 	width: 90px;
 	position: relative;
-	background-color: red;
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
 	float: right;

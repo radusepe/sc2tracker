@@ -29,7 +29,12 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('dashboard');
+		if((isset($_GET['id']) && $_GET['id'] != '') && (isset($_GET['name']) && $_GET['name'] != '') && (isset($_GET['realm']) && $_GET['realm'] != '')) {
+			$this->render('dashboard');
+		}
+		else {
+			$this->render('login');
+		}
 	}
 
 	/**

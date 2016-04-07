@@ -13,9 +13,15 @@
 
   <body>
     <?php
+    $id = '';
+    $name = '';
+    $realm = '';
+
+    if((isset($_GET['id']) && $_GET['id'] != '') && (isset($_GET['name']) && $_GET['name'] != '') && (isset($_GET['realm']) && $_GET['realm'] != '')) {
       $id = $_GET['id'];
       $name = $_GET['name'];
       $realm = $_GET['realm'];
+    }
     ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript">
@@ -33,11 +39,14 @@
             <p><?php echo $name ?></p>
             
             <div id="portrait-container">
-              <img src="/images/portrait-summary-grandmaster.png" id="portrait">
+              <img id="portrait">
             </div>
           </div>
         </div>
       </div>
+      <?php
+      if((isset($_GET['id']) && $_GET['id'] != '') && (isset($_GET['name']) && $_GET['name'] != '') && (isset($_GET['realm']) && $_GET['realm'] != '')) {
+      ?>
       <div class="main-container">
 
         <div class="col-md-4">
@@ -107,6 +116,9 @@
         </div> -->
 
       </div>
+      <?php 
+      }
+      ?>
     <!-- </div> -->
 
   </body>

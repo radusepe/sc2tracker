@@ -1,53 +1,49 @@
-<?php
-/* @var $this SiteController */
-/* @var $model LoginForm */
-/* @var $form CActiveForm  */
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>SC2tracker</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/login.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+  </head>
 
-$this->pageTitle=Yii::app()->name . ' - Login';
-$this->breadcrumbs=array(
-	'Login',
-);
-?>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- <script src="js/submit.js"></script> -->
+    <div class="main-background">
+      <div class="login-card">
+        <div class="login-container">
+          <div class="top-rim"></div>
+          <div id="title">
+            <img src="/images/title.png" alt="SC2tracker">
+          </div>
 
-<h1>Login</h1>
+          <form>
+            <div class="form-group">
+              <label for="login-url">SC2 PROFILE URL</label>
+              <input type="text" class="form-control" id="InputUrl" placeholder="URL">
+            </div>
+            <!-- <div class="form-group">
+              <label for="login-email">EMAIL</label>
+              <input type="email" class="form-control" id="InputEmail" placeholder="EMAIL">
+            </div>
+            <div class="form-group">
+              <label for="login-password">PASSWORD</label>
+              <input type="password" class="form-control" id="InputPassword" placeholder="PASSWORD">
+            </div> -->
+            <div class="form-group">
+              <button type="submit" class="btn btn-default" name="submit">Submit</button>
+            </div>
+          </form>
 
-<p>Please fill out the following form with your login credentials:</p>
+        </div>
+      </div>
+    </div>
 
-<div class="form">
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'login-form',
-	'enableClientValidation'=>true,
-	'clientOptions'=>array(
-		'validateOnSubmit'=>true,
-	),
-)); ?>
-
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username'); ?>
-		<?php echo $form->error($model,'username'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password'); ?>
-		<?php echo $form->error($model,'password'); ?>
-		<p class="hint">
-			Hint: You may login with <kbd>demo</kbd>/<kbd>demo</kbd> or <kbd>admin</kbd>/<kbd>admin</kbd>.
-		</p>
-	</div>
-
-	<div class="row rememberMe">
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'rememberMe'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Login'); ?>
-	</div>
-
-<?php $this->endWidget(); ?>
-</div><!-- form -->
+  </body>
+</html>
