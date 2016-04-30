@@ -71,7 +71,7 @@ $(document).ready(function(){
 
 	   	result = xhr.response;
 	    json = JSON.parse(result);
-	    console.log(json.portrait);
+	    // console.log(json.portrait);
 
 	    $("#portrait-container").css("background", "url( " + json.portrait.url + ")");
 	    $("#portrait-container").css("background-position-x", json.portrait.x);

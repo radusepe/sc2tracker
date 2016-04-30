@@ -25,13 +25,30 @@ class SiteController extends Controller
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
 	 */
-	public function actionIndex()
-	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		if((isset($_GET['id']) && $_GET['id'] != '') && (isset($_GET['name']) && $_GET['name'] != '') && (isset($_GET['realm']) && $_GET['realm'] != '')) {
+	public function actionIndex($profileUrl = '')
+	{	if(isset($_POST['profileUrl']) && $_POST['profileUrl'] != ''){
+			$InputUrl = $_POST['profileUrl'];
+		    $InputUrl = trim($InputUrl, '/');
+			$name = substr($InputUrl, strrpos($InputUrl, '/')+1);
+			$InputUrl = dirname($InputUrl);
+			$InputUrl = trim($InputUrl, '/');
+			$realm = substr($InputUrl, strrpos($InputUrl, '/')+1);
+			$InputUrl = dirname($InputUrl);
+			$InputUrl = trim($InputUrl, '/');
+			$id = substr($InputUrl, strrpos($InputUrl, '/')+1);
+			//run a test to make sure it's valid
+			//assuming it's valid do the following...
+
+			header("Location: ".Yii::app()->getBaseUrl(true).'/?&id='.$id.'&realm='.$realm.'&name='.$name);
+		}
+		elseif((isset($_GET['id']) && $_GET['id'] != '') && (isset($_GET['name']) && $_GET['name'] != '') && (isset($_GET['realm']) && $_GET['realm'] != '')){
 			$this->render('dashboard');
 		}
+		// renders the view file 'protected/views/site/index.php'
+		// using the default layout 'protected/views/layouts/main.php'
+		// if((isset($_GET['id']) && $_GET['id'] != '') && (isset($_GET['name']) && $_GET['name'] != '') && (isset($_GET['realm']) && $_GET['realm'] != '')) {
+		// 	$this->render('dashboard');
+		// }
 		else {
 			$this->render('login');
 		}
