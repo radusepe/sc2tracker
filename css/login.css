@@ -18,7 +18,7 @@ body {
 }
 
 .login-card {
-	background: url("/images/protoss-login.png");
+	background: url("/images/protoss-login.png") no-repeat;
 	border-radius: 10px;
 	height: 90%;/*850px*/
 	width: 600px;

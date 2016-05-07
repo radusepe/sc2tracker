@@ -24,6 +24,8 @@ function validateForm() {
 	   	}
 	}
 	else{
+		$('#error-message').show();
+   		setTimeout(hideMessage, 3000);
 		return false;
 	}
 }
