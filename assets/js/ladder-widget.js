@@ -48,37 +48,52 @@ $(document).ready(function(){
 
         result = xhr.response;
         json = JSON.parse(result);
-        // console.log(json);
+        console.log(json);
         var ladderMembers = json.ladderMembers;
 
         var rankIter;
+        if(rank == 100){
+            rankIter = 5;
+        }
+        else if(rank == 99){
+            rankIter = 4;
+        }
+        else if(rank == 2){
+            rankIter = 2;
+        }
+        else if(rank == 1){
+            rankIter = 1;
+        }
+        else{
+            rankIter = 3;
+        }
 
         //will need math fixes
         for(var i=0; i < 5; i++){
             var rowName = document.createElement('p');
-            rowName.innerHTML = ladderMembers[i+rank-3].character.displayName;
+            rowName.innerHTML = ladderMembers[i+rank-rankIter].character.displayName;
             rowName.className = 'rowName';
             document.getElementById('name'+(i+1)).appendChild(rowName);
 
             var rowRank = document.createElement('p');
-            rowRank.innerHTML = i+rank-2;
+            rowRank.innerHTML = i+rank-rankIter+1;
             rowRank.className = 'rowRank';
             document.getElementById('rank'+(i+1)).appendChild(rowRank);
 
             // var rowRace = document.createElement('p');
-            if(ladderMembers[i+rank-3].favoriteRaceP1 != undefined){
-                // rowRace.innerHTML = ladderMembers[i+rank-3].favoriteRaceP1;//this has to be changed to use picture not text
+            if(ladderMembers[i+rank-rankIter].favoriteRaceP1 != undefined){
+                // rowRace.innerHTML = ladderMembers[i+rank-rankIter].favoriteRaceP1;//this has to be changed to use picture not text
                 // rowRace.className = 'rowRace';
                 // document.getElementById('race'+(i+1)).appendChild(rowRace);
                 $('#race'+(i+1)).css('background-image', 'url(' + '../../../../images/race-symbols.png' + ') ');
                 $('#race'+(i+1)).css('background-repeat', 'no-repeat');
-                if(ladderMembers[i+rank-3].favoriteRaceP1 == 'TERRAN'){
+                if(ladderMembers[i+rank-rankIter].favoriteRaceP1 == 'TERRAN'){
                     $('#race'+(i+1)).css('background-position', '0px 2px');
                 }
-                else if(ladderMembers[i+rank-3].favoriteRaceP1 == 'ZERG'){
+                else if(ladderMembers[i+rank-rankIter].favoriteRaceP1 == 'ZERG'){
                     $('#race'+(i+1)).css('background-position', '0px -56px');
                 }
-                else if(ladderMembers[i+rank-3].favoriteRaceP1 == 'PROTOSS'){
+                else if(ladderMembers[i+rank-rankIter].favoriteRaceP1 == 'PROTOSS'){
                     $('#race'+(i+1)).css('background-position', '0px -110px');
                 }
                 else{
