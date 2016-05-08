@@ -48,7 +48,7 @@ $(document).ready(function(){
 
         result = xhr.response;
         json = JSON.parse(result);
-        console.log(json);
+        // console.log(json);
         var ladderMembers = json.ladderMembers;
 
         var rankIter;

@@ -26,7 +26,6 @@ body {
 }
 
 .main-container {
-	height: 100%;
 	width: 1000px;
 	margin: 0 auto;
   	/*border: solid 1px red;*/
@@ -69,13 +68,14 @@ body {
 .widget-container {
 	width: 300px;
 	height: 425px;
-	float: left;
+	/*float: left;*/
 	border-radius: 10px;
+	margin: 0 auto;
 	margin-top: 40px;
 	/*margin-right: 50px;*/
 	/*border: solid 1px white;*/
 	overflow: hidden;
-	display: inline-block;
+	/*display: inline-block;*/
 }
 
 .widget-base {
@@ -108,4 +108,90 @@ body {
 	float: right;
 	margin-top: 20px;
 	margin-right: 50px;
+}
+
+.widget-column {
+	width: 33.3333%;
+	float: left;
+	position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.mobile-name {
+	display: none;
+}
+
+@media (max-width: 769px) {
+  	.widget-column {
+		width: 50%;
+	}
+
+	.main-container {
+		width: 100%;
+	}
+
+	.header-bar {
+		height: 360px;
+	}
+
+	.main-header {
+		width: 100%;
+	}
+
+	#title {
+		margin: 0 auto;
+		margin-top: 8px;
+		height: 33%;
+		float: none;
+	}
+
+	.user-info {
+		min-width: none;
+		max-width: none;
+		width: 100%;
+		height: 67%;
+		margin-right: 0;
+	}
+
+	#portrait-container {
+		margin: 25px auto 0px;
+		float: none;
+		margin-top: none;
+		margin-right: none;
+	}
+
+	.desktop-name {
+		display: none;
+	}
+
+	.mobile-name {
+		display: block;
+	}
+
+	.user-info p {
+		float: none;
+	}
+}
+
+@media (max-width: 415px) {
+	.widget-column {
+		width: 100%;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+
+	#title {
+		background: url(/images/title-mobile.png) no-repeat;
+		width: 320px;
+	}
+
+	#portrait-container {
+		margin: 5px auto 0px;
+	}
+
+	.header-bar {
+		height: 300px;
+	}
 }

@@ -36,11 +36,12 @@
         <div class="main-header">
           <div id="title"></div>
           <div class="user-info">
-            <p><?php echo $name ?></p>
+            <p class="desktop-name"><?php echo $name ?></p>
             
             <div id="portrait-container">
               <img id="portrait">
             </div>
+            <p class="mobile-name"><?php echo $name ?></p>
           </div>
         </div>
       </div>
@@ -49,7 +50,7 @@
       ?>
       <div class="main-container">
 
-        <div class="col-md-4">
+        <div class="widget-column">
           <div class="widget-container">
             <div class="widget-data" id="profile-widget">
               <?php
@@ -60,7 +61,7 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="widget-column">
           <div class="widget-container">
             <div class="widget-data" id="ladder-widget">
               <?php
@@ -71,7 +72,7 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="widget-column">
           <div class="widget-container">
             <div class="widget-data" id="grandmaster-widget">
               <?php
@@ -82,7 +83,7 @@
           </div>
         </div>
 
-        <!-- <div class="col-md-4">
+        <!-- <div class="widget-column">
           <div class="widget-container">
             <div class="widget-data" id="winloss-widget">
               <?php
@@ -93,7 +94,7 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="widget-column">
           <div class="widget-container">
             <div class="widget-data" id="streak-widget">
               <?php
@@ -104,7 +105,7 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="widget-column">
           <div class="widget-container">
             <div class="widget-data" id="history-widget">
               <?php
