@@ -123,7 +123,13 @@ body {
 	display: none;
 }
 
-@media (max-width: 769px) {
+.smoothfooter {
+	height: 40px;
+	position: relative;
+	display: inline-block;
+}
+
+@media (max-width: 999px) {
   	.widget-column {
 		width: 50%;
 	}
@@ -149,7 +155,7 @@ body {
 
 	.user-info {
 		min-width: 0;
-		max-width: 0;
+		max-width: none;
 		width: 100%;
 		height: 67%;
 		margin-right: 0;
@@ -175,7 +181,7 @@ body {
 	}
 }
 
-@media (max-width: 415px) {
+@media (max-width: 658px) {
 	.widget-column {
 		width: 100%;
 		padding-right: 10px;
@@ -192,6 +198,11 @@ body {
 	}
 
 	.header-bar {
-		height: 300px;
+		height: 320px;
+		background-color: transparent;
+	}
+
+	.user-info p {
+		font-size: 70px;
 	}
 }

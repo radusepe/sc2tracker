@@ -25,6 +25,7 @@ body {
 	position: absolute;
   	top: 50%; left: 50%;
   	transform: translate(-50%,-50%);
+  	overflow: hidden;
 }
 
 .login-container {
@@ -93,7 +94,23 @@ form {
     margin-bottom: 24px;
 }
 
-@media (max-width: 415px) {
+.demo {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	background-color: rgba(65, 114, 146, 0.57);
+	color: #fff;
+	padding: 5px;
+    border-radius: 5px;
+    border-color: rgb(65, 114, 146);
+    font-size: 17px;
+}
+
+a {
+	color: white;
+}
+
+@media (max-width: 603px) {
 	.login-card {
 		width: 300px;
 		height: 425px;

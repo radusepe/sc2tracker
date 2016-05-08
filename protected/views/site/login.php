@@ -17,6 +17,9 @@
     <script src="../../../../assets/js/login.js"></script>
     <div class="main-background">
       <div class="login-card">
+        <div class="demo">
+          <a href="http://sc2tracker.com/?&id=913925&realm=1&name=MCanning">Demo</a>
+        </div>
         <div class="login-container">
           <div class="top-rim"></div>
           <div id="title">

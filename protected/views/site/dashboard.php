@@ -115,7 +115,7 @@
             <div class="widget-base">match history</div>
           </div>
         </div> -->
-
+        <div class="smoothfooter"></div>
       </div>
       <?php 
       }
