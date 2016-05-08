@@ -92,3 +92,23 @@ form {
     border: 1px solid rgba(216, 50, 50, 0.69);
     margin-bottom: 24px;
 }
+
+@media (max-width: 415px) {
+	.login-card {
+		width: 300px;
+		height: 425px;
+		background: url("/images/protoss_profile.png") no-repeat;
+	}
+
+	form {
+		padding: 0px 20px;
+	}
+	#title img {
+		content:url("/images/login-title-mobile.png");
+	}
+
+	.login-container {
+		height: 250px;
+		min-height: 0;
+	}
+}
