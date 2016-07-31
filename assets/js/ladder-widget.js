@@ -14,12 +14,16 @@ $(document).ready(function(){
     var currentSeason = json.currentSeason;
     var ladderId = "0";
 
-    for(var i=0; i < currentSeason.length; i++){
-        if(currentSeason[i].ladder[0].matchMakingQueue == "LOTV_SOLO"){
-            league = currentSeason[i].ladder[0].league;
-            ladderId = currentSeason[i].ladder[0].ladderId;
-            rank = currentSeason[i].ladder[0].rank;
+    // console.log("TEST");
 
+    for(var i=0; i < currentSeason.length; i++){
+        if(currentSeason[i].ladder.length!=0){
+            if(currentSeason[i].ladder[0].matchMakingQueue == "LOTV_SOLO"){
+                league = currentSeason[i].ladder[0].league;
+                ladderId = currentSeason[i].ladder[0].ladderId;
+                rank = currentSeason[i].ladder[0].rank;
+
+            }
         }
     }
 
