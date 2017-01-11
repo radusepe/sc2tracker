@@ -54,26 +54,32 @@ $(document).ready(function(){
         json = JSON.parse(result);
         // console.log(json);
         var ladderMembers = json.ladderMembers;
+        // console.log(rank);
+        // console.log(ladderMembers);
+        // console.log(ladderMembers.length);
 
         var rankIter;
-        if(rank == 100){
-            rankIter = 5;
+        if(rank === 1){
+            rankIter = 1;
         }
-        else if(rank == 99){
-            rankIter = 4;
-        }
-        else if(rank == 2){
+        else if(rank === 2){
             rankIter = 2;
         }
-        else if(rank == 1){
-            rankIter = 1;
+        else if(rank === ladderMembers.length){
+            rankIter = 5;
+        }
+        else if(rank === ladderMembers.length - 1){
+            rankIter = 4;
         }
         else{
             rankIter = 3;
         }
-
+        // console.log(rankIter);
         //will need math fixes
         for(var i=0; i < 5; i++){
+            if (i+rank-rankIter+1 >= ladderMembers.length) {
+                break;
+            }
             var rowName = document.createElement('p');
             rowName.innerHTML = ladderMembers[i+rank-rankIter].character.displayName;
             rowName.className = 'rowName';
@@ -103,7 +109,7 @@ $(document).ready(function(){
                 else{
                     $('#race'+(i+1)).css('background-position', '0px -162px');
                 }
-                
+
 
             }
         }
