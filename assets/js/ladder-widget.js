@@ -52,11 +52,13 @@ $(document).ready(function(){
 
         result = xhr.response;
         json = JSON.parse(result);
-        // console.log(json);
         var ladderMembers = json.ladderMembers;
-        // console.log(rank);
-        // console.log(ladderMembers);
-        // console.log(ladderMembers.length);
+        for (var i=0; i< ladderMembers.length; i++) {
+            if (ladderMembers[i].character.displayName === name && ladderMembers[i].character.id == id) {
+                rank = i+1;
+                break;
+            }
+        }
 
         var rankIter;
         if(rank === 1){
