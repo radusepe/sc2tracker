@@ -18,7 +18,7 @@
     <div class="main-background">
       <div class="login-card">
         <div class="demo">
-          <a href="/?&id=2538432&realm=1&name=radu">Demo</a>
+          <a href="/?&id=992628&realm=1&name=JonSnow">Demo</a>
         </div>
         <div class="login-container">
           <div class="top-rim"></div>
